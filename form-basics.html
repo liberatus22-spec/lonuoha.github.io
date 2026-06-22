@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Web Form</title>
+
+<style>
+
+/* FULL HEIGHT FIX */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* PAGE BACKGROUND + FONT */
+body {
+    background-color: #6a4ea0;
+    font-family: Arial, sans-serif;
+    padding-bottom: 80px; /* prevents footer overlap */
+}
+
+/* HEADER */
+header {
+    background-color: #d9c39b;
+    padding: 15px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* LAYOUT */
+#container {
+    display: flex;
+    min-height: 100%; /* ensures sidebar reaches footer */
+}
+
+/* SIDEBAR */
+nav {
+    width: 200px;
+    background-color: #4cb5ae;
+    padding: 20px;
+    height: 100%; /* sidebar now stretches full height */
+}
+
+nav a {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* MAIN */
+main {
+    flex: 1;
+    padding: 40px;
+}
+
+/* FORM BOX */
+form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+}
+
+/* LIST RESET */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* FIELD SPACING */
+form li + li {
+    margin-top: 1em;
+}
+
+/* LABELS */
+label {
+    display: inline-grid;
+    width: 120px;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* INPUTS */
+input,
+textarea {
+    font: 1em sans-serif;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    width: 250px;
+    padding: 6px;
+}
+
+/* TEXTAREA HEIGHT */
+textarea {
+    vertical-align: top;
+    height: 5em;
+}
+
+/* ACTIVE FIELD */
+input:focus,
+textarea:focus {
+    border-color: #000;
+}
+
+/* VALIDATION */
+input:required:valid,
+textarea:required:valid {
+    border: 3px solid #0f0;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+/* BUTTON ALIGNMENT */
+.button {
+    padding-left: 120px;
+}
+
+button {
+    margin-left: 0.5em;
+    background-color: #4cb5ae;
+    padding: 8px 14px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background-color: #d9c39b; /* matches header */
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>Web Form</header>
+
+<div id="container">
+
+    <nav>
+        <a href="timer.html">JavaScript Timer</a>
+        <a href="index.html">Home</a>
+        <a href="form-basics.html">Web Form</a>
+    </nav>
+
+    <main>
+        <form method="post">
+            <ul>
+
+                <li>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name" required value="Tommy Rain" />
+                </li>
+
+                <li>
+                    <label for="mail">E-mail:</label>
+                    <input type="email" id="mail" name="user_mail" required value="Tommyrain@gmail.com" />
+                </li>
+
+                <li>
+                    <label for="msg">Message:</label>
+                    <textarea id="msg" name="user_message" required>Hey dude?</textarea>
+                </li>
+
+                <li>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone"
+                           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                           placeholder="123-456-7899"
+                           required
+                           value="505-555-5555" />
+                </li>
+
+                <li>
+                    <p style="font-weight:bold; margin-left:120px;">Preferred Contact:</p>
+                </li>
+
+                <li>
+                    <label for="email_contact">E-mail</label>
+                    <input type="radio" id="email_contact" name="pref_contact" value="email">
+                </li>
+
+                <li>
+                    <label for="phone_contact">Phone</label>
+                    <input type="radio" id="phone_contact" name="pref_contact" value="phone">
+                </li>
+
+                <li>
+                    <label for="text_contact">Text</label>
+                    <input type="radio" id="text_contact" name="pref_contact" value="text">
+                </li>
+
+                <li class="button">
+                    <button type="submit">Send your message</button>
+                </li>
+
+            </ul>
+        </form>
+    </main>
+
+</div>
+
+<footer>
+    Liberatus Onuoha<br>
+    © 2025
+</footer>
+
+</body>
+</html>

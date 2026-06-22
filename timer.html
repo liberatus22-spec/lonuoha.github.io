@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Timer Page</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+    /* Header */
+    header h1 {
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    /* Sidebar */
+    nav {
+        background-color: #4cb5ae;
+        padding: 20px;
+        width: 200px;
+        min-height: 100vh;
+    }
+
+    nav a {
+        display: inline;
+        margin-right: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+    }
+
+    /* Footer strip matches header color */
+    footer {
+        background-color: #d9c39b;
+        padding: 15px;
+        text-align: left;
+        font-weight: bold;
+        color: black;
+    }
+
+    /* TIMER BOX */
+    #countdown {
+        margin-top: 70px;
+        text-align: center;
+    }
+
+    #timer {
+        display: inline-block;
+        padding: 55px 80px; /* increased height and width for a taller strip */
+        border: 10px solid #001433; /* strong dark navy */
+        background-color: black;
+        color: white;
+        font-size: 60px; /* reduced from 90px */
+        font-weight: 800; /* bold but not extreme */
+        border-radius: 16px;
+        letter-spacing: 1px;
+    }
+
+    .timer-unit {
+        margin-right: 20px;
+        font-size: 28px; /* reduced slightly */
+        color: #4cb5ae;
+        font-weight: bold;
+    }
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Timer</h1>
+</header>
+
+<div id="container" style="display:flex;">
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="bootstrap.html">Bootstrap Page</a>
+        <a href="grid.html">CSS Grid Page</a>
+    </nav>
+
+    <main style="flex:1; padding:40px;">
+
+        <div id="countdown">
+            <p id="timer">
+                <span id="days"></span>
+                <span class="timer-unit">Days</span>
+                <span id="hours"></span>
+                <span class="timer-unit">Hours</span>
+                <span id="minutes"></span>
+                <span class="timer-unit">Minutes</span>
+                <span id="seconds"></span>
+                <span class="timer-unit">Seconds</span>
+            </p>
+        </div>
+
+    </main>
+
+</div>
+
+<footer>
+    Liberatus Onuoha<br>
+    © 2026
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
